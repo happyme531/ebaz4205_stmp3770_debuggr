@@ -1,0 +1,11 @@
+verilog xil_defaultlib --include "/home/user/.local/Xilinx/Vivado/2021.2/data/xilinx_vip/include" --include "../../../../ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ipshared/ec67/hdl" --include "../../../../ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ipshared/3007/hdl" --include "../../../../ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ipshared/62b6" \
+"../../../bd/ZYNQ_CORE/ip/ZYNQ_CORE_processing_system7_0_0/sim/ZYNQ_CORE_processing_system7_0_0.v" \
+"../../../bd/ZYNQ_CORE/ip/ZYNQ_CORE_LED_0_0/sim/ZYNQ_CORE_LED_0_0.v" \
+"../../../bd/ZYNQ_CORE/ip/ZYNQ_CORE_sjtag_top_mod_0_0/sim/ZYNQ_CORE_sjtag_top_mod_0_0.v" \
+"../../../bd/ZYNQ_CORE/ip/ZYNQ_CORE_clk_wiz_0_0/ZYNQ_CORE_clk_wiz_0_0_clk_wiz.v" \
+"../../../bd/ZYNQ_CORE/ip/ZYNQ_CORE_clk_wiz_0_0/ZYNQ_CORE_clk_wiz_0_0.v" \
+"../../../bd/ZYNQ_CORE/sim/ZYNQ_CORE.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

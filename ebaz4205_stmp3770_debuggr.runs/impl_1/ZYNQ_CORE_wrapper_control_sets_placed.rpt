@@ -1,0 +1,87 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue Mar  8 17:28:56 2022
+| Host         : user-manjaro running 64-bit Manjaro Linux
+| Command      : report_control_sets -verbose -file ZYNQ_CORE_wrapper_control_sets_placed.rpt
+| Design       : ZYNQ_CORE_wrapper
+| Device       : xc7z010
+----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |     9 |
+|    Minimum number of control sets                        |     9 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    25 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |     9 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     5 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               2 |            1 |
+| No           | No                    | Yes                    |              67 |           20 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               1 |            1 |
+| Yes          | No                    | Yes                    |              68 |           27 |
+| Yes          | Yes                   | No                     |              37 |           11 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------------------+-------------------------------------------------------------------+----------------------------------------------------------+------------------+----------------+--------------+
+|                   Clock Signal                   |                           Enable Signal                           |                     Set/Reset Signal                     | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------------------------+-------------------------------------------------------------------+----------------------------------------------------------+------------------+----------------+--------------+
+|  ZYNQ_CORE_i/clk_wiz_0/inst/clk_out1             | ZYNQ_CORE_i/sjtag_top_mod_0/inst/cycle_48MHz[31]_i_2_n_0          |                                                          |                1 |              1 |         1.00 |
+|  ZYNQ_CORE_i/clk_wiz_0/inst/clk_out1             |                                                                   |                                                          |                1 |              2 |         2.00 |
+|  ZYNQ_CORE_i/clk_wiz_0/inst/clk_out1             | ZYNQ_CORE_i/sjtag_top_mod_0/inst/FSM_sequential_stageA[3]_i_1_n_0 | ZYNQ_CORE_i/sjtag_top_mod_0/inst/TDO_i_2_n_0             |                2 |              4 |         2.00 |
+|  ZYNQ_CORE_i/clk_wiz_0/inst/clk_out1             | ZYNQ_CORE_i/sjtag_top_mod_0/inst/send_cnt[7]_i_2_n_0              | ZYNQ_CORE_i/sjtag_top_mod_0/inst/send_cnt[7]_i_1_n_0     |                3 |              6 |         2.00 |
+|  ZYNQ_CORE_i/processing_system7_0/inst/FCLK_CLK0 |                                                                   | ZYNQ_CORE_i/LED_0/inst/led_r_i_2_n_0                     |                8 |             27 |         3.38 |
+|  ZYNQ_CORE_i/clk_wiz_0/inst/clk_out1             | ZYNQ_CORE_i/sjtag_top_mod_0/inst/cycle_48MHz[31]_i_2_n_0          | ZYNQ_CORE_i/sjtag_top_mod_0/inst/cycle_48MHz[31]_i_1_n_0 |                8 |             31 |         3.88 |
+|  ZYNQ_CORE_i/clk_wiz_0/inst/clk_out1             | ZYNQ_CORE_i/sjtag_top_mod_0/inst/cycle_192MHz[31]_i_1_n_0         | ZYNQ_CORE_i/sjtag_top_mod_0/inst/TDO_i_2_n_0             |               20 |             32 |         1.60 |
+|  ZYNQ_CORE_i/clk_wiz_0/inst/clk_out1             | ZYNQ_CORE_i/sjtag_top_mod_0/inst/timeout_cnt[31]_i_1_n_0          | ZYNQ_CORE_i/sjtag_top_mod_0/inst/TDO_i_2_n_0             |                5 |             32 |         6.40 |
+|  ZYNQ_CORE_i/clk_wiz_0/inst/clk_out1             |                                                                   | ZYNQ_CORE_i/sjtag_top_mod_0/inst/TDO_i_2_n_0             |               12 |             40 |         3.33 |
++--------------------------------------------------+-------------------------------------------------------------------+----------------------------------------------------------+------------------+----------------+--------------+
+
+
