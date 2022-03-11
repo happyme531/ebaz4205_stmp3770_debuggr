@@ -64,7 +64,8 @@ module ZYNQ_CORE_sjtag_top_mod_0_0 (
   TDO,
   sjtag,
   sjtag_pull,
-  test_LED
+  test_LED,
+  stageA
 );
 
 input wire clk_192MHz;
@@ -79,6 +80,7 @@ output wire TDO;
 inout wire sjtag;
 inout wire sjtag_pull;
 output wire test_LED;
+output wire [7 : 0] stageA;
 
   sjtag_top_mod #(
     .timeout1_192MHz_ticks(32'H00000040),
@@ -93,6 +95,7 @@ output wire test_LED;
     .TDO(TDO),
     .sjtag(sjtag),
     .sjtag_pull(sjtag_pull),
-    .test_LED(test_LED)
+    .test_LED(test_LED),
+    .stageA(stageA)
   );
 endmodule

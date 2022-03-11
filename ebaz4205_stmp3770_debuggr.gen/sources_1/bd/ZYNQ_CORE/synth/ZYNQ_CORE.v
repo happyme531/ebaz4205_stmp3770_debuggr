@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-//Date        : Tue Mar  8 17:27:10 2022
+//Date        : Fri Mar 11 20:33:02 2022
 //Host        : user-manjaro running 64-bit Manjaro Linux
 //Command     : generate_target ZYNQ_CORE.bd
 //Design      : ZYNQ_CORE
@@ -9,14 +9,11 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "ZYNQ_CORE,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=ZYNQ_CORE,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=4,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "ZYNQ_CORE.hwdef" *) 
+(* CORE_GENERATION_INFO = "ZYNQ_CORE,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=ZYNQ_CORE,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_clkrst_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "ZYNQ_CORE.hwdef" *) 
 module ZYNQ_CORE
-   (DATA3_11,
-    DATA3_5,
-    DATA3_6,
-    DATA3_7,
-    DATA3_8,
-    DATA3_9,
+   (DATA2_11,
+    DATA2_14,
+    DATA2_8,
     DDR_addr,
     DDR_ba,
     DDR_cas_n,
@@ -38,14 +35,16 @@ module ZYNQ_CORE
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    greenLED,
-    redLED);
-  inout DATA3_11;
-  input DATA3_5;
-  input DATA3_6;
-  input DATA3_7;
-  input DATA3_8;
-  output DATA3_9;
+    JTAG_TCK,
+    JTAG_TDI,
+    JTAG_TDO,
+    JTAG_TMS,
+    JTAG_nTRST,
+    SJTAG,
+    SJTAG_PULLUP);
+  output DATA2_11;
+  output DATA2_14;
+  output DATA2_8;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -67,14 +66,22 @@ module ZYNQ_CORE
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
-  output greenLED;
-  output redLED;
+  input JTAG_TCK;
+  input JTAG_TDI;
+  output JTAG_TDO;
+  input JTAG_TMS;
+  input JTAG_nTRST;
+  inout SJTAG;
+  inout SJTAG_PULLUP;
 
   wire LED_0_led;
+  wire LED_1_led;
   wire Net;
+  wire Net1;
   wire TCK_0_1;
   wire TDI_0_1;
   wire TMS_0_1;
+  wire clk_wiz_0_clk_24M;
   wire clk_wiz_0_clk_out1;
   wire nTRST_0_1;
   wire [14:0]processing_system7_0_DDR_ADDR;
@@ -93,7 +100,7 @@ module ZYNQ_CORE
   wire processing_system7_0_DDR_RESET_N;
   wire processing_system7_0_DDR_WE_N;
   wire processing_system7_0_FCLK_CLK0;
-  wire processing_system7_0_FCLK_CLK1;
+  wire processing_system7_0_FCLK_CLK2;
   wire processing_system7_0_FCLK_RESET0_N;
   wire processing_system7_0_FIXED_IO_DDR_VRN;
   wire processing_system7_0_FIXED_IO_DDR_VRP;
@@ -102,23 +109,39 @@ module ZYNQ_CORE
   wire processing_system7_0_FIXED_IO_PS_PORB;
   wire processing_system7_0_FIXED_IO_PS_SRSTB;
   wire sjtag_top_mod_0_TDO;
+  wire [7:0]sjtag_top_mod_0_stageA;
   wire sjtag_top_mod_0_test_LED;
 
-  assign DATA3_9 = sjtag_top_mod_0_TDO;
-  assign TCK_0_1 = DATA3_7;
-  assign TDI_0_1 = DATA3_6;
-  assign TMS_0_1 = DATA3_8;
-  assign greenLED = sjtag_top_mod_0_test_LED;
-  assign nTRST_0_1 = DATA3_5;
-  assign redLED = LED_0_led;
+  assign DATA2_11 = LED_0_led;
+  assign DATA2_14 = sjtag_top_mod_0_test_LED;
+  assign DATA2_8 = LED_1_led;
+  assign JTAG_TDO = sjtag_top_mod_0_TDO;
+  assign TCK_0_1 = JTAG_TCK;
+  assign TDI_0_1 = JTAG_TDI;
+  assign TMS_0_1 = JTAG_TMS;
+  assign nTRST_0_1 = JTAG_nTRST;
   ZYNQ_CORE_LED_0_0 LED_0
        (.clk(processing_system7_0_FCLK_CLK0),
         .led(LED_0_led),
         .rst_n(processing_system7_0_FCLK_RESET0_N));
+  ZYNQ_CORE_LED_1_0 LED_1
+       (.clk(processing_system7_0_FCLK_CLK2),
+        .led(LED_1_led),
+        .rst_n(processing_system7_0_FCLK_RESET0_N));
   ZYNQ_CORE_clk_wiz_0_0 clk_wiz_0
-       (.clk_in1(processing_system7_0_FCLK_CLK1),
-        .clk_out1(clk_wiz_0_clk_out1),
+       (.clk_192M(clk_wiz_0_clk_out1),
+        .clk_24M(clk_wiz_0_clk_24M),
+        .clk_in1(processing_system7_0_FCLK_CLK2),
         .resetn(processing_system7_0_FCLK_RESET0_N));
+  ZYNQ_CORE_ila_0_0 ila_0
+       (.clk(clk_wiz_0_clk_out1),
+        .probe0(clk_wiz_0_clk_24M),
+        .probe1(nTRST_0_1),
+        .probe2(TDI_0_1),
+        .probe3(TCK_0_1),
+        .probe4(TMS_0_1),
+        .probe5(sjtag_top_mod_0_TDO),
+        .probe6(sjtag_top_mod_0_stageA));
   ZYNQ_CORE_processing_system7_0_0 processing_system7_0
        (.DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),
@@ -138,7 +161,7 @@ module ZYNQ_CORE
         .DDR_VRP(FIXED_IO_ddr_vrp),
         .DDR_WEB(DDR_we_n),
         .FCLK_CLK0(processing_system7_0_FCLK_CLK0),
-        .FCLK_CLK1(processing_system7_0_FCLK_CLK1),
+        .FCLK_CLK1(processing_system7_0_FCLK_CLK2),
         .FCLK_RESET0_N(processing_system7_0_FCLK_RESET0_N),
         .MIO(FIXED_IO_mio[53:0]),
         .M_AXI_GP0_ACLK(processing_system7_0_FCLK_CLK0),
@@ -164,6 +187,8 @@ module ZYNQ_CORE
         .clk_192MHz(clk_wiz_0_clk_out1),
         .nTRST(nTRST_0_1),
         .rst_n(processing_system7_0_FCLK_RESET0_N),
-        .sjtag(DATA3_11),
+        .sjtag(SJTAG),
+        .sjtag_pull(SJTAG_PULLUP),
+        .stageA(sjtag_top_mod_0_stageA),
         .test_LED(sjtag_top_mod_0_test_LED));
 endmodule

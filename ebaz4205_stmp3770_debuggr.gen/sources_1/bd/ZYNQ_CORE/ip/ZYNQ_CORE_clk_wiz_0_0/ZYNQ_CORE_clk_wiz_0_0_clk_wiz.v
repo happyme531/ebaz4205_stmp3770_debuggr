@@ -56,7 +56,8 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// clk_out1__192.00000______0.000______50.0______149.761____172.145
+// clk_192M__192.00000______0.000______50.0______149.761____172.145
+// _clk_24M__24.00000______0.000______50.0______251.079____172.145
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -69,7 +70,8 @@ module ZYNQ_CORE_clk_wiz_0_0_clk_wiz
 
  (// Clock in ports
   // Clock out ports
-  output        clk_out1,
+  output        clk_192M,
+  output        clk_24M,
   // Status and control signals
   input         resetn,
   input         clk_in1
@@ -78,7 +80,9 @@ module ZYNQ_CORE_clk_wiz_0_0_clk_wiz
   //------------------------------------
 wire clk_in1_ZYNQ_CORE_clk_wiz_0_0;
 wire clk_in2_ZYNQ_CORE_clk_wiz_0_0;
-  assign clk_in1_ZYNQ_CORE_clk_wiz_0_0 = clk_in1;
+  BUFG clkin1_bufg
+   (.O (clk_in1_ZYNQ_CORE_clk_wiz_0_0),
+    .I (clk_in1));
 
 
 
@@ -90,8 +94,8 @@ wire clk_in2_ZYNQ_CORE_clk_wiz_0_0;
   //    * Unused inputs are tied off
   //    * Unused outputs are labeled unused
 
-  wire        clk_out1_ZYNQ_CORE_clk_wiz_0_0;
-  wire        clk_out2_ZYNQ_CORE_clk_wiz_0_0;
+  wire        clk_192M_ZYNQ_CORE_clk_wiz_0_0;
+  wire        clk_24M_ZYNQ_CORE_clk_wiz_0_0;
   wire        clk_out3_ZYNQ_CORE_clk_wiz_0_0;
   wire        clk_out4_ZYNQ_CORE_clk_wiz_0_0;
   wire        clk_out5_ZYNQ_CORE_clk_wiz_0_0;
@@ -105,7 +109,6 @@ wire clk_in2_ZYNQ_CORE_clk_wiz_0_0;
   wire        clkfbout_ZYNQ_CORE_clk_wiz_0_0;
   wire        clkfbout_buf_ZYNQ_CORE_clk_wiz_0_0;
   wire        clkfboutb_unused;
-   wire clkout1_unused;
    wire clkout2_unused;
    wire clkout3_unused;
    wire clkout4_unused;
@@ -125,13 +128,16 @@ wire clk_in2_ZYNQ_CORE_clk_wiz_0_0;
     .CLKOUT0_DIVIDE       (5),
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
+    .CLKOUT1_DIVIDE       (40),
+    .CLKOUT1_PHASE        (0.000),
+    .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKIN1_PERIOD        (20.833))
   plle2_adv_inst
     // Output clocks
    (
     .CLKFBOUT            (clkfbout_ZYNQ_CORE_clk_wiz_0_0),
-    .CLKOUT0             (clk_out1_ZYNQ_CORE_clk_wiz_0_0),
-    .CLKOUT1             (clkout1_unused),
+    .CLKOUT0             (clk_192M_ZYNQ_CORE_clk_wiz_0_0),
+    .CLKOUT1             (clk_24M_ZYNQ_CORE_clk_wiz_0_0),
     .CLKOUT2             (clkout2_unused),
     .CLKOUT3             (clkout3_unused),
     .CLKOUT4             (clkout4_unused),
@@ -171,9 +177,13 @@ wire clk_in2_ZYNQ_CORE_clk_wiz_0_0;
 
 
   BUFG clkout1_buf
-   (.O   (clk_out1),
-    .I   (clk_out1_ZYNQ_CORE_clk_wiz_0_0));
+   (.O   (clk_192M),
+    .I   (clk_192M_ZYNQ_CORE_clk_wiz_0_0));
 
+
+  BUFG clkout2_buf
+   (.O   (clk_24M),
+    .I   (clk_24M_ZYNQ_CORE_clk_wiz_0_0));
 
 
 

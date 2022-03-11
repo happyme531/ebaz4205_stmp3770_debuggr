@@ -2,13 +2,13 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Tue Mar  8 17:27:15 2022
-# Process ID: 45834
+# Start of session at: Fri Mar 11 20:33:51 2022
+# Process ID: 724400
 # Current directory: /home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1
 # Command line: vivado -log ZYNQ_CORE_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ZYNQ_CORE_wrapper.tcl
 # Log file: /home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/ZYNQ_CORE_wrapper.vds
 # Journal file: /home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/vivado.jou
-# Running On: user-manjaro, OS: Linux, CPU Frequency: 3800.000 MHz, CPU Physical cores: 24, Host memory: 33631 MB
+# Running On: user-manjaro, OS: Linux, CPU Frequency: 2200.000 MHz, CPU Physical cores: 24, Host memory: 33629 MB
 #-----------------------------------------------------------
 source ZYNQ_CORE_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -26,79 +26,91 @@ WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis b
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 45972
+INFO: [Synth 8-7075] Helper process launched with PID 724487
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 1810 ; free virtual = 14885
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 4753 ; free virtual = 16457
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'ZYNQ_CORE_wrapper' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/hdl/ZYNQ_CORE_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'ZYNQ_CORE' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:13]
-INFO: [Synth 8-6157] synthesizing module 'ZYNQ_CORE_LED_0_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/.Xil/Vivado-45834-user-manjaro/realtime/ZYNQ_CORE_LED_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ZYNQ_CORE_LED_0_0' (1#1) [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/.Xil/Vivado-45834-user-manjaro/realtime/ZYNQ_CORE_LED_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'ZYNQ_CORE_clk_wiz_0_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/.Xil/Vivado-45834-user-manjaro/realtime/ZYNQ_CORE_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'ZYNQ_CORE_clk_wiz_0_0' (2#1) [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/.Xil/Vivado-45834-user-manjaro/realtime/ZYNQ_CORE_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'ZYNQ_CORE_processing_system7_0_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/.Xil/Vivado-45834-user-manjaro/realtime/ZYNQ_CORE_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ZYNQ_CORE_processing_system7_0_0' (3#1) [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/.Xil/Vivado-45834-user-manjaro/realtime/ZYNQ_CORE_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARVALID' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWVALID' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_BREADY' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_RREADY' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_WLAST' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_WVALID' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARID' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWID' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_WID' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARBURST' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARLOCK' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARSIZE' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWBURST' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWLOCK' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWSIZE' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARPROT' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWPROT' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARADDR' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWADDR' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_WDATA' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARCACHE' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARLEN' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARQOS' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWCACHE' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWLEN' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWQOS' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_WSTRB' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'ZYNQ_CORE_processing_system7_0_0' has 63 connections declared, but only 36 given [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:122]
-INFO: [Synth 8-6157] synthesizing module 'ZYNQ_CORE_sjtag_top_mod_0_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/.Xil/Vivado-45834-user-manjaro/realtime/ZYNQ_CORE_sjtag_top_mod_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ZYNQ_CORE_sjtag_top_mod_0_0' (4#1) [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/.Xil/Vivado-45834-user-manjaro/realtime/ZYNQ_CORE_sjtag_top_mod_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'sjtag_pull' of module 'ZYNQ_CORE_sjtag_top_mod_0_0' is unconnected for instance 'sjtag_top_mod_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:159]
-WARNING: [Synth 8-7023] instance 'sjtag_top_mod_0' of module 'ZYNQ_CORE_sjtag_top_mod_0_0' has 10 connections declared, but only 9 given [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:159]
-INFO: [Synth 8-6155] done synthesizing module 'ZYNQ_CORE' (5#1) [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'ZYNQ_CORE_wrapper' (6#1) [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/hdl/ZYNQ_CORE_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ZYNQ_CORE_LED_0_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/.Xil/Vivado-724400-user-manjaro/realtime/ZYNQ_CORE_LED_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZYNQ_CORE_LED_0_0' (1#1) [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/.Xil/Vivado-724400-user-manjaro/realtime/ZYNQ_CORE_LED_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ZYNQ_CORE_LED_1_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/.Xil/Vivado-724400-user-manjaro/realtime/ZYNQ_CORE_LED_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZYNQ_CORE_LED_1_0' (2#1) [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/.Xil/Vivado-724400-user-manjaro/realtime/ZYNQ_CORE_LED_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ZYNQ_CORE_clk_wiz_0_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/.Xil/Vivado-724400-user-manjaro/realtime/ZYNQ_CORE_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'ZYNQ_CORE_clk_wiz_0_0' (3#1) [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/.Xil/Vivado-724400-user-manjaro/realtime/ZYNQ_CORE_clk_wiz_0_0_stub.v:5]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:136]
+INFO: [Synth 8-6157] synthesizing module 'ZYNQ_CORE_ila_0_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/.Xil/Vivado-724400-user-manjaro/realtime/ZYNQ_CORE_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZYNQ_CORE_ila_0_0' (4#1) [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/.Xil/Vivado-724400-user-manjaro/realtime/ZYNQ_CORE_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ZYNQ_CORE_processing_system7_0_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/.Xil/Vivado-724400-user-manjaro/realtime/ZYNQ_CORE_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZYNQ_CORE_processing_system7_0_0' (5#1) [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/.Xil/Vivado-724400-user-manjaro/realtime/ZYNQ_CORE_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARVALID' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWVALID' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_BREADY' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_RREADY' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_WLAST' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_WVALID' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARID' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWID' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_WID' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARBURST' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARLOCK' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARSIZE' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWBURST' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWLOCK' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWSIZE' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARPROT' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWPROT' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARADDR' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWADDR' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_WDATA' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARCACHE' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARLEN' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARQOS' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWCACHE' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWLEN' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_AWQOS' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_WSTRB' of module 'ZYNQ_CORE_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'ZYNQ_CORE_processing_system7_0_0' has 63 connections declared, but only 36 given [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:145]
+INFO: [Synth 8-6157] synthesizing module 'ZYNQ_CORE_sjtag_top_mod_0_0' [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/.Xil/Vivado-724400-user-manjaro/realtime/ZYNQ_CORE_sjtag_top_mod_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ZYNQ_CORE_sjtag_top_mod_0_0' (6#1) [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/.Xil/Vivado-724400-user-manjaro/realtime/ZYNQ_CORE_sjtag_top_mod_0_0_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'clk_wiz_0'. This will prevent further optimization [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:131]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:136]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'sjtag_top_mod_0'. This will prevent further optimization [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:182]
+INFO: [Synth 8-6155] done synthesizing module 'ZYNQ_CORE' (7#1) [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/synth/ZYNQ_CORE.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'ZYNQ_CORE_wrapper' (8#1) [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/hdl/ZYNQ_CORE_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 1760 ; free virtual = 14836
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 4582 ; free virtual = 16287
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2617 ; free virtual = 15692
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5500 ; free virtual = 17204
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2617 ; free virtual = 15692
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5500 ; free virtual = 17204
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2611 ; free virtual = 15687
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5471 ; free virtual = 17175
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_processing_system7_0_0/ZYNQ_CORE_processing_system7_0_0/ZYNQ_CORE_processing_system7_0_0_in_context.xdc] for cell 'ZYNQ_CORE_i/processing_system7_0'
 Finished Parsing XDC File [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_processing_system7_0_0/ZYNQ_CORE_processing_system7_0_0/ZYNQ_CORE_processing_system7_0_0_in_context.xdc] for cell 'ZYNQ_CORE_i/processing_system7_0'
-Parsing XDC File [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_sjtag_top_mod_0_0/ZYNQ_CORE_sjtag_top_mod_0_0/ZYNQ_CORE_sjtag_top_mod_0_0_in_context.xdc] for cell 'ZYNQ_CORE_i/sjtag_top_mod_0'
-Finished Parsing XDC File [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_sjtag_top_mod_0_0/ZYNQ_CORE_sjtag_top_mod_0_0/ZYNQ_CORE_sjtag_top_mod_0_0_in_context.xdc] for cell 'ZYNQ_CORE_i/sjtag_top_mod_0'
-Parsing XDC File [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_LED_0_0/ZYNQ_CORE_LED_0_0/ZYNQ_CORE_LED_0_0_in_context.xdc] for cell 'ZYNQ_CORE_i/LED_0'
-Finished Parsing XDC File [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_LED_0_0/ZYNQ_CORE_LED_0_0/ZYNQ_CORE_LED_0_0_in_context.xdc] for cell 'ZYNQ_CORE_i/LED_0'
 Parsing XDC File [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_clk_wiz_0_0/ZYNQ_CORE_clk_wiz_0_0/ZYNQ_CORE_clk_wiz_0_0_in_context.xdc] for cell 'ZYNQ_CORE_i/clk_wiz_0'
 Finished Parsing XDC File [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_clk_wiz_0_0/ZYNQ_CORE_clk_wiz_0_0/ZYNQ_CORE_clk_wiz_0_0_in_context.xdc] for cell 'ZYNQ_CORE_i/clk_wiz_0'
+Parsing XDC File [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_ila_0_0/ZYNQ_CORE_ila_0_0/ZYNQ_CORE_ila_0_0_in_context.xdc] for cell 'ZYNQ_CORE_i/ila_0'
+Finished Parsing XDC File [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_ila_0_0/ZYNQ_CORE_ila_0_0/ZYNQ_CORE_ila_0_0_in_context.xdc] for cell 'ZYNQ_CORE_i/ila_0'
+Parsing XDC File [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_LED_0_0/ZYNQ_CORE_LED_0_0/ZYNQ_CORE_LED_0_0_in_context.xdc] for cell 'ZYNQ_CORE_i/LED_0'
+Finished Parsing XDC File [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_LED_0_0/ZYNQ_CORE_LED_0_0/ZYNQ_CORE_LED_0_0_in_context.xdc] for cell 'ZYNQ_CORE_i/LED_0'
+Parsing XDC File [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_LED_1_0/ZYNQ_CORE_LED_1_0/ZYNQ_CORE_LED_0_0_in_context.xdc] for cell 'ZYNQ_CORE_i/LED_1'
+Finished Parsing XDC File [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_LED_1_0/ZYNQ_CORE_LED_1_0/ZYNQ_CORE_LED_0_0_in_context.xdc] for cell 'ZYNQ_CORE_i/LED_1'
+Parsing XDC File [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_sjtag_top_mod_0_0/ZYNQ_CORE_sjtag_top_mod_0_0/ZYNQ_CORE_sjtag_top_mod_0_0_in_context.xdc] for cell 'ZYNQ_CORE_i/sjtag_top_mod_0'
+Finished Parsing XDC File [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_sjtag_top_mod_0_0/ZYNQ_CORE_sjtag_top_mod_0_0/ZYNQ_CORE_sjtag_top_mod_0_0_in_context.xdc] for cell 'ZYNQ_CORE_i/sjtag_top_mod_0'
 Parsing XDC File [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.srcs/constrs_1/new/ebaz4205.xdc]
+WARNING: [Vivado 12-584] No ports matched 'DATA2_16'. [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.srcs/constrs_1/new/ebaz4205.xdc:40]
 Finished Parsing XDC File [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.srcs/constrs_1/new/ebaz4205.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.srcs/constrs_1/new/ebaz4205.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/ZYNQ_CORE_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.srcs/constrs_1/new/ebaz4205.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ZYNQ_CORE_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/ZYNQ_CORE_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.srcs/constrs_1/new/ZYNQ_CORE_wrapper.xdc]
@@ -107,22 +119,22 @@ Parsing XDC File [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr
 Finished Parsing XDC File [/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2560 ; free virtual = 15635
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5387 ; free virtual = 17092
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2560 ; free virtual = 15635
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5387 ; free virtual = 17092
 WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2646 ; free virtual = 15721
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5493 ; free virtual = 17198
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2645 ; free virtual = 15721
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5493 ; free virtual = 17198
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -389,14 +401,16 @@ Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint fi
 Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  /home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_processing_system7_0_0/ZYNQ_CORE_processing_system7_0_0/ZYNQ_CORE_processing_system7_0_0_in_context.xdc, line 262).
 Applied set_property KEEP_HIERARCHY = SOFT for ZYNQ_CORE_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for ZYNQ_CORE_i/processing_system7_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for ZYNQ_CORE_i/sjtag_top_mod_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for ZYNQ_CORE_i/LED_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for ZYNQ_CORE_i/clk_wiz_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ZYNQ_CORE_i/ila_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ZYNQ_CORE_i/LED_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ZYNQ_CORE_i/LED_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ZYNQ_CORE_i/sjtag_top_mod_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2617 ; free virtual = 15692
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5491 ; free virtual = 17196
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2623 ; free virtual = 15699
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5497 ; free virtual = 17203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -419,25 +433,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2664 ; free virtual = 15744
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5476 ; free virtual = 17185
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2475 ; free virtual = 15555
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5376 ; free virtual = 17086
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2475 ; free virtual = 15555
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5376 ; free virtual = 17086
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2473 ; free virtual = 15552
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5374 ; free virtual = 17083
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -455,37 +469,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2520 ; free virtual = 15600
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5324 ; free virtual = 17034
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2520 ; free virtual = 15600
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5324 ; free virtual = 17034
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2520 ; free virtual = 15600
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5325 ; free virtual = 17034
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2520 ; free virtual = 15600
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5325 ; free virtual = 17034
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2520 ; free virtual = 15600
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5325 ; free virtual = 17034
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2520 ; free virtual = 15600
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5325 ; free virtual = 17034
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -496,9 +510,11 @@ Report BlackBoxes:
 |      |BlackBox name                    |Instances |
 +------+---------------------------------+----------+
 |1     |ZYNQ_CORE_LED_0_0                |         1|
-|2     |ZYNQ_CORE_clk_wiz_0_0            |         1|
-|3     |ZYNQ_CORE_processing_system7_0_0 |         1|
-|4     |ZYNQ_CORE_sjtag_top_mod_0_0      |         1|
+|2     |ZYNQ_CORE_LED_1_0                |         1|
+|3     |ZYNQ_CORE_clk_wiz_0_0            |         1|
+|4     |ZYNQ_CORE_ila_0_0                |         1|
+|5     |ZYNQ_CORE_processing_system7_0_0 |         1|
+|6     |ZYNQ_CORE_sjtag_top_mod_0_0      |         1|
 +------+---------------------------------+----------+
 
 Report Cell Usage: 
@@ -506,31 +522,33 @@ Report Cell Usage:
 |      |Cell                           |Count |
 +------+-------------------------------+------+
 |1     |ZYNQ_CORE_LED_0                |     1|
-|2     |ZYNQ_CORE_clk_wiz_0            |     1|
-|3     |ZYNQ_CORE_processing_system7_0 |     1|
-|4     |ZYNQ_CORE_sjtag_top_mod_0      |     1|
-|5     |IBUF                           |     4|
-|6     |OBUF                           |     3|
+|2     |ZYNQ_CORE_LED_1                |     1|
+|3     |ZYNQ_CORE_clk_wiz_0            |     1|
+|4     |ZYNQ_CORE_ila_0                |     1|
+|5     |ZYNQ_CORE_processing_system7_0 |     1|
+|6     |ZYNQ_CORE_sjtag_top_mod_0      |     1|
+|7     |IBUF                           |     4|
+|8     |OBUF                           |     4|
 +------+-------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2520 ; free virtual = 15600
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5325 ; free virtual = 17034
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2570 ; free virtual = 15650
-Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2570 ; free virtual = 15650
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5385 ; free virtual = 17095
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5385 ; free virtual = 17095
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2661 ; free virtual = 15740
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5467 ; free virtual = 17177
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2593 ; free virtual = 15673
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5403 ; free virtual = 17113
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: ec7c6f44
+Synth Design complete, checksum: aa90e3da
 INFO: [Common 17-83] Releasing license: Synthesis
-32 Infos, 33 Warnings, 0 Critical Warnings and 0 Errors encountered.
+39 Infos, 34 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 2688.547 ; gain = 0.000 ; free physical = 2782 ; free virtual = 15862
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 2703.551 ; gain = 0.000 ; free physical = 5593 ; free virtual = 17302
 INFO: [Common 17-1381] The checkpoint '/home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.runs/synth_1/ZYNQ_CORE_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file ZYNQ_CORE_wrapper_utilization_synth.rpt -pb ZYNQ_CORE_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Mar  8 17:27:46 2022...
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 11 20:34:22 2022...

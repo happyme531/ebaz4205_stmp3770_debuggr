@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-//Date        : Tue Mar  8 17:27:10 2022
+//Date        : Fri Mar 11 20:33:03 2022
 //Host        : user-manjaro running 64-bit Manjaro Linux
 //Command     : generate_target ZYNQ_CORE_wrapper.bd
 //Design      : ZYNQ_CORE_wrapper
@@ -10,12 +10,9 @@
 `timescale 1 ps / 1 ps
 
 module ZYNQ_CORE_wrapper
-   (DATA3_11,
-    DATA3_5,
-    DATA3_6,
-    DATA3_7,
-    DATA3_8,
-    DATA3_9,
+   (DATA2_11,
+    DATA2_14,
+    DATA2_8,
     DDR_addr,
     DDR_ba,
     DDR_cas_n,
@@ -37,14 +34,16 @@ module ZYNQ_CORE_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    greenLED,
-    redLED);
-  inout DATA3_11;
-  input DATA3_5;
-  input DATA3_6;
-  input DATA3_7;
-  input DATA3_8;
-  output DATA3_9;
+    JTAG_TCK,
+    JTAG_TDI,
+    JTAG_TDO,
+    JTAG_TMS,
+    JTAG_nTRST,
+    SJTAG,
+    SJTAG_PULLUP);
+  output DATA2_11;
+  output DATA2_14;
+  output DATA2_8;
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -66,15 +65,17 @@ module ZYNQ_CORE_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  output greenLED;
-  output redLED;
+  input JTAG_TCK;
+  input JTAG_TDI;
+  output JTAG_TDO;
+  input JTAG_TMS;
+  input JTAG_nTRST;
+  inout SJTAG;
+  inout SJTAG_PULLUP;
 
-  wire DATA3_11;
-  wire DATA3_5;
-  wire DATA3_6;
-  wire DATA3_7;
-  wire DATA3_8;
-  wire DATA3_9;
+  wire DATA2_11;
+  wire DATA2_14;
+  wire DATA2_8;
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
   wire DDR_cas_n;
@@ -96,16 +97,18 @@ module ZYNQ_CORE_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire greenLED;
-  wire redLED;
+  wire JTAG_TCK;
+  wire JTAG_TDI;
+  wire JTAG_TDO;
+  wire JTAG_TMS;
+  wire JTAG_nTRST;
+  wire SJTAG;
+  wire SJTAG_PULLUP;
 
   ZYNQ_CORE ZYNQ_CORE_i
-       (.DATA3_11(DATA3_11),
-        .DATA3_5(DATA3_5),
-        .DATA3_6(DATA3_6),
-        .DATA3_7(DATA3_7),
-        .DATA3_8(DATA3_8),
-        .DATA3_9(DATA3_9),
+       (.DATA2_11(DATA2_11),
+        .DATA2_14(DATA2_14),
+        .DATA2_8(DATA2_8),
         .DDR_addr(DDR_addr),
         .DDR_ba(DDR_ba),
         .DDR_cas_n(DDR_cas_n),
@@ -127,6 +130,11 @@ module ZYNQ_CORE_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .greenLED(greenLED),
-        .redLED(redLED));
+        .JTAG_TCK(JTAG_TCK),
+        .JTAG_TDI(JTAG_TDI),
+        .JTAG_TDO(JTAG_TDO),
+        .JTAG_TMS(JTAG_TMS),
+        .JTAG_nTRST(JTAG_nTRST),
+        .SJTAG(SJTAG),
+        .SJTAG_PULLUP(SJTAG_PULLUP));
 endmodule

@@ -1,10 +1,10 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-// Date        : Tue Mar  8 16:41:19 2022
+// Date        : Fri Mar 11 19:43:33 2022
 // Host        : user-manjaro running 64-bit Manjaro Linux
-// Command     : write_verilog -force -mode funcsim -rename_top ZYNQ_CORE_clk_wiz_0_0 -prefix
-//               ZYNQ_CORE_clk_wiz_0_0_ ZYNQ_CORE_clk_wiz_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               /home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_clk_wiz_0_0/ZYNQ_CORE_clk_wiz_0_0_sim_netlist.v
 // Design      : ZYNQ_CORE_clk_wiz_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,39 +14,47 @@
 
 (* NotValidForBitStream *)
 module ZYNQ_CORE_clk_wiz_0_0
-   (clk_out1,
+   (clk_192M,
+    clk_24M,
     resetn,
     clk_in1);
-  output clk_out1;
+  output clk_192M;
+  output clk_24M;
   input resetn;
   input clk_in1;
 
+  wire clk_192M;
+  wire clk_24M;
   wire clk_in1;
-  wire clk_out1;
   wire resetn;
 
-  ZYNQ_CORE_clk_wiz_0_0_ZYNQ_CORE_clk_wiz_0_0_clk_wiz inst
-       (.clk_in1(clk_in1),
-        .clk_out1(clk_out1),
+  ZYNQ_CORE_clk_wiz_0_0_clk_wiz inst
+       (.clk_192M(clk_192M),
+        .clk_24M(clk_24M),
+        .clk_in1(clk_in1),
         .resetn(resetn));
 endmodule
 
-module ZYNQ_CORE_clk_wiz_0_0_ZYNQ_CORE_clk_wiz_0_0_clk_wiz
-   (clk_out1,
+module ZYNQ_CORE_clk_wiz_0_0_clk_wiz
+   (clk_192M,
+    clk_24M,
     resetn,
     clk_in1);
-  output clk_out1;
+  output clk_192M;
+  output clk_24M;
   input resetn;
   input clk_in1;
 
+  wire clk_192M;
+  wire clk_192M_ZYNQ_CORE_clk_wiz_0_0;
+  wire clk_24M;
+  wire clk_24M_ZYNQ_CORE_clk_wiz_0_0;
   wire clk_in1;
-  wire clk_out1;
-  wire clk_out1_ZYNQ_CORE_clk_wiz_0_0;
+  wire clk_in1_ZYNQ_CORE_clk_wiz_0_0;
   wire clkfbout_ZYNQ_CORE_clk_wiz_0_0;
   wire clkfbout_buf_ZYNQ_CORE_clk_wiz_0_0;
   wire reset_high;
   wire resetn;
-  wire NLW_plle2_adv_inst_CLKOUT1_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT4_UNCONNECTED;
@@ -60,9 +68,17 @@ module ZYNQ_CORE_clk_wiz_0_0_ZYNQ_CORE_clk_wiz_0_0_clk_wiz
        (.I(clkfbout_ZYNQ_CORE_clk_wiz_0_0),
         .O(clkfbout_buf_ZYNQ_CORE_clk_wiz_0_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFG clkin1_bufg
+       (.I(clk_in1),
+        .O(clk_in1_ZYNQ_CORE_clk_wiz_0_0));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkout1_buf
-       (.I(clk_out1_ZYNQ_CORE_clk_wiz_0_0),
-        .O(clk_out1));
+       (.I(clk_192M_ZYNQ_CORE_clk_wiz_0_0),
+        .O(clk_192M));
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFG clkout2_buf
+       (.I(clk_24M_ZYNQ_CORE_clk_wiz_0_0),
+        .O(clk_24M));
   (* BOX_TYPE = "PRIMITIVE" *) 
   PLLE2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
@@ -73,7 +89,7 @@ module ZYNQ_CORE_clk_wiz_0_0_ZYNQ_CORE_clk_wiz_0_0_clk_wiz
     .CLKOUT0_DIVIDE(5),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
-    .CLKOUT1_DIVIDE(1),
+    .CLKOUT1_DIVIDE(40),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT2_DIVIDE(1),
@@ -88,7 +104,7 @@ module ZYNQ_CORE_clk_wiz_0_0_ZYNQ_CORE_clk_wiz_0_0_clk_wiz
     .CLKOUT5_DIVIDE(1),
     .CLKOUT5_DUTY_CYCLE(0.500000),
     .CLKOUT5_PHASE(0.000000),
-    .COMPENSATION("ZHOLD"),
+    .COMPENSATION("BUF_IN"),
     .DIVCLK_DIVIDE(1),
     .IS_CLKINSEL_INVERTED(1'b0),
     .IS_PWRDWN_INVERTED(1'b0),
@@ -99,11 +115,11 @@ module ZYNQ_CORE_clk_wiz_0_0_ZYNQ_CORE_clk_wiz_0_0_clk_wiz
     plle2_adv_inst
        (.CLKFBIN(clkfbout_buf_ZYNQ_CORE_clk_wiz_0_0),
         .CLKFBOUT(clkfbout_ZYNQ_CORE_clk_wiz_0_0),
-        .CLKIN1(clk_in1),
+        .CLKIN1(clk_in1_ZYNQ_CORE_clk_wiz_0_0),
         .CLKIN2(1'b0),
         .CLKINSEL(1'b1),
-        .CLKOUT0(clk_out1_ZYNQ_CORE_clk_wiz_0_0),
-        .CLKOUT1(NLW_plle2_adv_inst_CLKOUT1_UNCONNECTED),
+        .CLKOUT0(clk_192M_ZYNQ_CORE_clk_wiz_0_0),
+        .CLKOUT1(clk_24M_ZYNQ_CORE_clk_wiz_0_0),
         .CLKOUT2(NLW_plle2_adv_inst_CLKOUT2_UNCONNECTED),
         .CLKOUT3(NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED),
         .CLKOUT4(NLW_plle2_adv_inst_CLKOUT4_UNCONNECTED),

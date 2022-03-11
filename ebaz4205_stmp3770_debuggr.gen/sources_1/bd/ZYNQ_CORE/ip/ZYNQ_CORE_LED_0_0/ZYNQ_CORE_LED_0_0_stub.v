@@ -1,10 +1,10 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-// Date        : Tue Mar  8 16:37:47 2022
+// Date        : Fri Mar 11 16:58:06 2022
 // Host        : user-manjaro running 64-bit Manjaro Linux
-// Command     : write_verilog -force -mode synth_stub -rename_top ZYNQ_CORE_LED_0_0 -prefix
-//               ZYNQ_CORE_LED_0_0_ ZYNQ_CORE_LED_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               /home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ip/ZYNQ_CORE_LED_0_0/ZYNQ_CORE_LED_0_0_stub.v
 // Design      : ZYNQ_CORE_LED_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1

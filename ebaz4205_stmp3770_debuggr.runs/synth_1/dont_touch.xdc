@@ -11,13 +11,19 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ZYNQ_CORE |
 # IP: bd/ZYNQ_CORE/ip/ZYNQ_CORE_processing_system7_0_0/ZYNQ_CORE_processing_system7_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ZYNQ_CORE_processing_system7_0_0 || ORIG_REF_NAME==ZYNQ_CORE_processing_system7_0_0} -quiet] -quiet
 
-# IP: bd/ZYNQ_CORE/ip/ZYNQ_CORE_LED_0_0/ZYNQ_CORE_LED_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ZYNQ_CORE_LED_0_0 || ORIG_REF_NAME==ZYNQ_CORE_LED_0_0} -quiet] -quiet
-
 # IP: bd/ZYNQ_CORE/ip/ZYNQ_CORE_sjtag_top_mod_0_0/ZYNQ_CORE_sjtag_top_mod_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ZYNQ_CORE_sjtag_top_mod_0_0 || ORIG_REF_NAME==ZYNQ_CORE_sjtag_top_mod_0_0} -quiet] -quiet
 
 # IP: bd/ZYNQ_CORE/ip/ZYNQ_CORE_clk_wiz_0_0/ZYNQ_CORE_clk_wiz_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ZYNQ_CORE_clk_wiz_0_0 || ORIG_REF_NAME==ZYNQ_CORE_clk_wiz_0_0} -quiet] -quiet
+
+# IP: bd/ZYNQ_CORE/ip/ZYNQ_CORE_ila_0_0/ZYNQ_CORE_ila_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ZYNQ_CORE_ila_0_0 || ORIG_REF_NAME==ZYNQ_CORE_ila_0_0} -quiet] -quiet
+
+# IP: bd/ZYNQ_CORE/ip/ZYNQ_CORE_LED_0_0/ZYNQ_CORE_LED_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ZYNQ_CORE_LED_0_0 || ORIG_REF_NAME==ZYNQ_CORE_LED_0_0} -quiet] -quiet
+
+# IP: bd/ZYNQ_CORE/ip/ZYNQ_CORE_LED_1_0/ZYNQ_CORE_LED_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ZYNQ_CORE_LED_1_0 || ORIG_REF_NAME==ZYNQ_CORE_LED_1_0} -quiet] -quiet
 
 # XDC: /home/user/ebaz4205_stmp3770_debuggr/ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE/ZYNQ_CORE_ooc.xdc

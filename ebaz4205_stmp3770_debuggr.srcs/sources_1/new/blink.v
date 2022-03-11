@@ -25,7 +25,7 @@ module LED(
      input rst_n,
      output led
  );
- parameter T1MS = 26'd25_000_000 ; //50M晶振时钟
+ parameter T1MS = 26'd50_000_000 ; //50M晶振时钟
  reg [25:0]time_count;//时钟计数器
  reg led_r;
  reg led_g;

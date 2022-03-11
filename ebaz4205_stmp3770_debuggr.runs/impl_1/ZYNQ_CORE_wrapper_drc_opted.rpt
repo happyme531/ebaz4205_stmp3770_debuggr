@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar  8 17:28:49 2022
+| Date         : Fri Mar 11 20:35:29 2022
 | Host         : user-manjaro running 64-bit Manjaro Linux
 | Command      : report_drc -file ZYNQ_CORE_wrapper_drc_opted.rpt -pb ZYNQ_CORE_wrapper_drc_opted.pb -rpx ZYNQ_CORE_wrapper_drc_opted.rpx
 | Design       : ZYNQ_CORE_wrapper
@@ -24,18 +24,23 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 1
+             Violations found: 2
 +--------+----------+---------------------------------+------------+
 | Rule   | Severity | Description                     | Violations |
 +--------+----------+---------------------------------+------------+
-| RPBF-3 | Warning  | IO port buffering is incomplete | 1          |
+| RPBF-3 | Warning  | IO port buffering is incomplete | 2          |
 +--------+----------+---------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
 RPBF-3#1 Warning
 IO port buffering is incomplete  
-Device port DATA3_11 expects both input and output buffering but the buffers are incomplete.
+Device port SJTAG expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#2 Warning
+IO port buffering is incomplete  
+Device port SJTAG_PULLUP expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 

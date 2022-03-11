@@ -69,7 +69,7 @@ input wire rst_n;
 output wire led;
 
   LED #(
-    .T1MS(26'B01011111010111100001000000)
+    .T1MS(26'B10111110101111000010000000)
   ) inst (
     .clk(clk),
     .rst_n(rst_n),

@@ -12,7 +12,8 @@ module sjtag_top_mod(
 	inout sjtag,
 	inout sjtag_pull,
 	
-	output reg test_LED
+	output reg test_LED,
+	output reg[7:0] stageA
 );
 
 parameter timeout1_192MHz_ticks	=  32'd64 ;
@@ -31,7 +32,7 @@ reg TCK_r1,TCK_r2;
 
 reg sjtag_buf_r1, sjtag_buf_r2;
 
-reg[7:0] stageA;
+//reg[7:0] stageA;
 reg[31:0] cycle_192MHz;
 reg[31:0] cycle_48MHz;
 reg[7:0]send_cnt;

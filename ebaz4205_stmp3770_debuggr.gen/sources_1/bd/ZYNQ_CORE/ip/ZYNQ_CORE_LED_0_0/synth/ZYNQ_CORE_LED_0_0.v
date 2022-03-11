@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "LED,Vivado 2021.2" *)
 (* CHECK_LICENSE_TYPE = "ZYNQ_CORE_LED_0_0,LED,{}" *)
-(* CORE_GENERATION_INFO = "ZYNQ_CORE_LED_0_0,LED,{x_ipProduct=Vivado 2021.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=LED,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,T1MS=01011111010111100001000000}" *)
+(* CORE_GENERATION_INFO = "ZYNQ_CORE_LED_0_0,LED,{x_ipProduct=Vivado 2021.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=LED,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,T1MS=10111110101111000010000000}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module ZYNQ_CORE_LED_0_0 (
@@ -70,7 +70,7 @@ input wire rst_n;
 output wire led;
 
   LED #(
-    .T1MS(26'B01011111010111100001000000)
+    .T1MS(26'B10111110101111000010000000)
   ) inst (
     .clk(clk),
     .rst_n(rst_n),

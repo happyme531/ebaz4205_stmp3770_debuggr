@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xAA0F744F7F771493",
+      "boundary_crc": "0xB7575247E727862E",
       "device": "xc7z010clg400-1",
       "gen_directory": "../../../../ebaz4205_stmp3770_debuggr.gen/sources_1/bd/ZYNQ_CORE",
       "name": "ZYNQ_CORE",
@@ -12,9 +12,11 @@
     },
     "design_tree": {
       "processing_system7_0": "",
-      "sjtag_top_mod_0": "",
+      "clk_wiz_0": "",
+      "ila_0": "",
       "LED_0": "",
-      "clk_wiz_0": ""
+      "LED_1": "",
+      "sjtag_top_mod_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -85,28 +87,48 @@
       }
     },
     "ports": {
-      "redLED": {
+      "JTAG_nTRST": {
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "ZYNQ_CORE_processing_system7_0_0_FCLK_CLK0",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "50000000",
+            "value_src": "user_prop"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "JTAG_TDI": {
+        "direction": "I"
+      },
+      "JTAG_TCK": {
+        "direction": "I"
+      },
+      "JTAG_TMS": {
+        "direction": "I"
+      },
+      "JTAG_TDO": {
         "direction": "O"
       },
-      "greenLED": {
+      "DATA2_8": {
         "direction": "O"
       },
-      "DATA3_5": {
-        "direction": "I"
-      },
-      "DATA3_6": {
-        "direction": "I"
-      },
-      "DATA3_7": {
-        "direction": "I"
-      },
-      "DATA3_8": {
-        "direction": "I"
-      },
-      "DATA3_9": {
+      "DATA2_11": {
         "direction": "O"
       },
-      "DATA3_11": {
+      "DATA2_14": {
+        "direction": "O"
+      },
+      "SJTAG": {
+        "direction": "IO"
+      },
+      "SJTAG_PULLUP": {
         "direction": "IO"
       }
     },
@@ -218,6 +240,9 @@
           },
           "PCW_FCLK_CLK1_BUF": {
             "value": "TRUE"
+          },
+          "PCW_FPGA0_PERIPHERAL_FREQMHZ": {
+            "value": "50"
           },
           "PCW_FPGA1_PERIPHERAL_FREQMHZ": {
             "value": "48"
@@ -504,67 +529,184 @@
           }
         }
       },
-      "sjtag_top_mod_0": {
-        "vlnv": "xilinx.com:module_ref:sjtag_top_mod:1.0",
-        "xci_name": "ZYNQ_CORE_sjtag_top_mod_0_0",
-        "xci_path": "ip/ZYNQ_CORE_sjtag_top_mod_0_0/ZYNQ_CORE_sjtag_top_mod_0_0.xci",
-        "inst_hier_path": "sjtag_top_mod_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "sjtag_top_mod",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk_192MHz": {
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "192000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "ZYNQ_CORE_processing_system7_0_0_FCLK_CLK1",
-                "value_src": "ip_prop"
-              }
-            }
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "ZYNQ_CORE_clk_wiz_0_0",
+        "xci_path": "ip/ZYNQ_CORE_clk_wiz_0_0/ZYNQ_CORE_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "208.32999999999998"
           },
-          "rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
+          "CLKOUT1_DRIVES": {
+            "value": "BUFG"
           },
-          "nTRST": {
-            "direction": "I"
+          "CLKOUT1_JITTER": {
+            "value": "149.761"
           },
-          "TDI": {
-            "direction": "I"
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "172.145"
           },
-          "TCK": {
-            "direction": "I"
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "192.000"
           },
-          "TMS": {
-            "direction": "I"
+          "CLKOUT2_DRIVES": {
+            "value": "BUFG"
           },
-          "TDO": {
-            "direction": "O"
+          "CLKOUT2_JITTER": {
+            "value": "251.079"
           },
-          "sjtag": {
-            "direction": "IO"
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "172.145"
           },
-          "sjtag_pull": {
-            "direction": "IO"
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "24"
           },
-          "test_LED": {
-            "direction": "O"
+          "CLKOUT2_USED": {
+            "value": "true"
+          },
+          "CLKOUT3_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT4_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT5_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT7_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLK_OUT1_PORT": {
+            "value": "clk_192M"
+          },
+          "CLK_OUT2_PORT": {
+            "value": "clk_24M"
+          },
+          "ENABLE_CLOCK_MONITOR": {
+            "value": "false"
+          },
+          "FEEDBACK_SOURCE": {
+            "value": "FDBK_AUTO"
+          },
+          "MMCM_BANDWIDTH": {
+            "value": "OPTIMIZED"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "20"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "20.833"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.0"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "5"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "40"
+          },
+          "MMCM_COMPENSATION": {
+            "value": "ZHOLD"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "1"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "2"
+          },
+          "PLL_CLKIN_PERIOD": {
+            "value": "20.833"
+          },
+          "PRIMITIVE": {
+            "value": "PLL"
+          },
+          "PRIM_SOURCE": {
+            "value": "Global_buffer"
+          },
+          "RESET_PORT": {
+            "value": "resetn"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_LOW"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_POWER_DOWN": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "true"
+          }
+        }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "ZYNQ_CORE_ila_0_0",
+        "xci_path": "ip/ZYNQ_CORE_ila_0_0/ZYNQ_CORE_ila_0_0.xci",
+        "inst_hier_path": "ila_0",
+        "parameters": {
+          "ALL_PROBE_SAME_MU": {
+            "value": "true"
+          },
+          "ALL_PROBE_SAME_MU_CNT": {
+            "value": "2"
+          },
+          "C_ADV_TRIGGER": {
+            "value": "false"
+          },
+          "C_DATA_DEPTH": {
+            "value": "8192"
+          },
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_EN_STRG_QUAL": {
+            "value": "0"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "7"
+          },
+          "C_PROBE0_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE1_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE2_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE3_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE4_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE5_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE6_MU_CNT": {
+            "value": "2"
+          },
+          "C_PROBE6_WIDTH": {
+            "value": "8"
+          },
+          "C_PROBE7_MU_CNT": {
+            "value": "2"
+          },
+          "C_TRIGIN_EN": {
+            "value": "false"
+          },
+          "C_TRIGOUT_EN": {
+            "value": "false"
           }
         }
       },
@@ -608,95 +750,126 @@
           }
         }
       },
-      "clk_wiz_0": {
-        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "xci_name": "ZYNQ_CORE_clk_wiz_0_0",
-        "xci_path": "ip/ZYNQ_CORE_clk_wiz_0_0/ZYNQ_CORE_clk_wiz_0_0.xci",
-        "inst_hier_path": "clk_wiz_0",
-        "parameters": {
-          "CLKIN1_JITTER_PS": {
-            "value": "208.32999999999998"
+      "LED_1": {
+        "vlnv": "xilinx.com:module_ref:LED:1.0",
+        "xci_name": "ZYNQ_CORE_LED_1_0",
+        "xci_path": "ip/ZYNQ_CORE_LED_1_0/ZYNQ_CORE_LED_1_0.xci",
+        "inst_hier_path": "LED_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "LED",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "48000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "ZYNQ_CORE_processing_system7_0_0_FCLK_CLK1",
+                "value_src": "default_prop"
+              }
+            }
           },
-          "CLKOUT1_DRIVES": {
-            "value": "BUFG"
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
           },
-          "CLKOUT1_JITTER": {
-            "value": "149.761"
+          "led": {
+            "direction": "O"
+          }
+        }
+      },
+      "sjtag_top_mod_0": {
+        "vlnv": "xilinx.com:module_ref:sjtag_top_mod:1.0",
+        "xci_name": "ZYNQ_CORE_sjtag_top_mod_0_0",
+        "xci_path": "ip/ZYNQ_CORE_sjtag_top_mod_0_0/ZYNQ_CORE_sjtag_top_mod_0_0.xci",
+        "inst_hier_path": "sjtag_top_mod_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "sjtag_top_mod",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_192MHz": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "192000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
           },
-          "CLKOUT1_PHASE_ERROR": {
-            "value": "172.145"
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
           },
-          "CLKOUT1_REQUESTED_OUT_FREQ": {
-            "value": "192.000"
+          "nTRST": {
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "ZYNQ_CORE_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              }
+            }
           },
-          "CLKOUT2_DRIVES": {
-            "value": "BUFG"
+          "TDI": {
+            "direction": "I"
           },
-          "CLKOUT3_DRIVES": {
-            "value": "BUFG"
+          "TCK": {
+            "direction": "I"
           },
-          "CLKOUT4_DRIVES": {
-            "value": "BUFG"
+          "TMS": {
+            "direction": "I"
           },
-          "CLKOUT5_DRIVES": {
-            "value": "BUFG"
+          "TDO": {
+            "direction": "O"
           },
-          "CLKOUT6_DRIVES": {
-            "value": "BUFG"
+          "sjtag": {
+            "direction": "IO"
           },
-          "CLKOUT7_DRIVES": {
-            "value": "BUFG"
+          "sjtag_pull": {
+            "direction": "IO"
           },
-          "ENABLE_CLOCK_MONITOR": {
-            "value": "false"
+          "test_LED": {
+            "direction": "O"
           },
-          "FEEDBACK_SOURCE": {
-            "value": "FDBK_AUTO"
-          },
-          "MMCM_BANDWIDTH": {
-            "value": "OPTIMIZED"
-          },
-          "MMCM_CLKFBOUT_MULT_F": {
-            "value": "20"
-          },
-          "MMCM_CLKIN1_PERIOD": {
-            "value": "20.833"
-          },
-          "MMCM_CLKIN2_PERIOD": {
-            "value": "10.0"
-          },
-          "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "5"
-          },
-          "MMCM_COMPENSATION": {
-            "value": "ZHOLD"
-          },
-          "PLL_CLKIN_PERIOD": {
-            "value": "20.833"
-          },
-          "PRIMITIVE": {
-            "value": "PLL"
-          },
-          "PRIM_IN_FREQ": {
-            "value": "48.000"
-          },
-          "PRIM_SOURCE": {
-            "value": "No_buffer"
-          },
-          "RESET_PORT": {
-            "value": "resetn"
-          },
-          "RESET_TYPE": {
-            "value": "ACTIVE_LOW"
-          },
-          "USE_LOCKED": {
-            "value": "false"
-          },
-          "USE_POWER_DOWN": {
-            "value": "false"
-          },
-          "USE_RESET": {
-            "value": "true"
+          "stageA": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
           }
         }
       }
@@ -719,76 +892,108 @@
       "LED_0_led": {
         "ports": [
           "LED_0/led",
-          "redLED"
+          "DATA2_11"
+        ]
+      },
+      "LED_1_led": {
+        "ports": [
+          "LED_1/led",
+          "DATA2_8"
         ]
       },
       "Net": {
         "ports": [
-          "DATA3_11",
+          "SJTAG",
           "sjtag_top_mod_0/sjtag"
+        ]
+      },
+      "Net1": {
+        "ports": [
+          "SJTAG_PULLUP",
+          "sjtag_top_mod_0/sjtag_pull"
         ]
       },
       "TCK_0_1": {
         "ports": [
-          "DATA3_7",
+          "JTAG_TCK",
+          "ila_0/probe3",
           "sjtag_top_mod_0/TCK"
         ]
       },
       "TDI_0_1": {
         "ports": [
-          "DATA3_6",
+          "JTAG_TDI",
+          "ila_0/probe2",
           "sjtag_top_mod_0/TDI"
         ]
       },
       "TMS_0_1": {
         "ports": [
-          "DATA3_8",
+          "JTAG_TMS",
+          "ila_0/probe4",
           "sjtag_top_mod_0/TMS"
+        ]
+      },
+      "clk_wiz_0_clk_24M": {
+        "ports": [
+          "clk_wiz_0/clk_24M",
+          "ila_0/probe0"
         ]
       },
       "clk_wiz_0_clk_out1": {
         "ports": [
-          "clk_wiz_0/clk_out1",
+          "clk_wiz_0/clk_192M",
+          "ila_0/clk",
           "sjtag_top_mod_0/clk_192MHz"
         ]
       },
       "nTRST_0_1": {
         "ports": [
-          "DATA3_5",
+          "JTAG_nTRST",
+          "ila_0/probe1",
           "sjtag_top_mod_0/nTRST"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",
-          "LED_0/clk",
-          "processing_system7_0/M_AXI_GP0_ACLK"
+          "processing_system7_0/M_AXI_GP0_ACLK",
+          "LED_0/clk"
         ]
       },
-      "processing_system7_0_FCLK_CLK1": {
+      "processing_system7_0_FCLK_CLK2": {
         "ports": [
           "processing_system7_0/FCLK_CLK1",
+          "LED_1/clk",
           "clk_wiz_0/clk_in1"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
         "ports": [
           "processing_system7_0/FCLK_RESET0_N",
+          "clk_wiz_0/resetn",
           "LED_0/rst_n",
-          "sjtag_top_mod_0/rst_n",
-          "clk_wiz_0/resetn"
+          "LED_1/rst_n",
+          "sjtag_top_mod_0/rst_n"
         ]
       },
       "sjtag_top_mod_0_TDO": {
         "ports": [
           "sjtag_top_mod_0/TDO",
-          "DATA3_9"
+          "JTAG_TDO",
+          "ila_0/probe5"
+        ]
+      },
+      "sjtag_top_mod_0_stageA": {
+        "ports": [
+          "sjtag_top_mod_0/stageA",
+          "ila_0/probe6"
         ]
       },
       "sjtag_top_mod_0_test_LED": {
         "ports": [
           "sjtag_top_mod_0/test_LED",
-          "greenLED"
+          "DATA2_14"
         ]
       }
     }
