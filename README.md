@@ -8,9 +8,7 @@ Not yet tested.
 
 Development status:  
 
-Development status:
-
-[x] The code can compile.
+[x] The code can compile.  
 [x] Tested but it doesn't work :( The code should be fine, maybe just some configuration / wiring problem.  
-[] The code is working with an external jtag adapter.
-[] Using petalinux and openocd to debug the stmp3770 without any external hardware.
+[] The code is working with an external jtag adapter.  
+[] Using petalinux and openocd to debug the stmp3770 without any external hardware.  
